@@ -1,24 +1,23 @@
 import { m } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Clock, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useQuoteForm, ESTIMATE_SECTION_ID } from "@/components/QuoteFormContext";
+import { HERO_FORM_ID, scrollToEstimateForm } from "@/components/QuoteFormContext";
 import { site, phoneHref } from "@/lib/site";
-import { services } from "@/lib/services-data";
 import { getIcon } from "@/lib/icons";
 import Highlight from "@/components/Highlight";
+import FormEmbed from "@/components/FormEmbed";
 import { SplitReveal } from "@/components/Reveal";
 import { introDelay } from "@/components/PremiumLoader";
 
 const EASE = [0.19, 1, 0.22, 1] as const;
 
 /**
- * Homepage hero: headline, subline and the "Get a Free Estimate" button that
- * scrolls to the lead form, plus a services card. Image-free by design: the
+ * Homepage hero: headline, subline and the "Get a Free Estimate" button on the
+ * left, the GHL lead form card on the right (stacked below the copy on small
+ * screens, where the button scrolls down to it). Image-free by design: the
  * backdrop is the brand palette (charcoal surface, gold glows, hairline grid).
  */
 const HeroSection = () => {
-  const { openQuoteForm } = useQuoteForm();
   const { business, hero } = site;
   const intro = introDelay();
 
@@ -89,10 +88,10 @@ const HeroSection = () => {
                 className="gap-2 px-8 py-6 text-base md:text-lg rounded-xl shadow-[0_18px_40px_-12px_hsl(var(--primary)/0.65)] btn-glow"
               >
                 <a
-                  href={`#${ESTIMATE_SECTION_ID}`}
+                  href={`#${HERO_FORM_ID}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    openQuoteForm();
+                    scrollToEstimateForm();
                   }}
                 >
                   {hero.primaryCta} <ArrowRight className="h-5 w-5" />
@@ -130,12 +129,13 @@ const HeroSection = () => {
             )}
           </div>
 
-          {/* Services card */}
+          {/* Lead form card */}
           <m.div
+            id={HERO_FORM_ID}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: intro + 0.35, duration: 0.7, ease: EASE }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative scroll-mt-24"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-premium-lg bg-card text-foreground border border-border/60">
               <div
@@ -143,35 +143,10 @@ const HeroSection = () => {
                 className="h-1.5 w-full"
                 style={{ background: "linear-gradient(90deg, hsl(var(--primary)), hsl(var(--secondary)))" }}
               />
-              <div className="p-6 md:p-7">
-                <div className="eyebrow-pill mb-2">{hero.cardHeading}</div>
-                <p className="text-muted-foreground text-sm mb-5">{hero.cardSub}</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {services.map((s) => {
-                    const Icon = getIcon(s.icon);
-                    return (
-                      <li key={s.slug}>
-                        <Link
-                          to="/services"
-                          className="group flex items-center gap-3 rounded-xl border border-border/70 bg-background px-3.5 py-3 hover:border-primary/40 hover:bg-primary-light transition-colors"
-                        >
-                          <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                            <Icon className="h-4 w-4" strokeWidth={1.9} />
-                          </span>
-                          <span className="font-semibold text-[13.5px] text-foreground leading-tight">{s.title}</span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <div className="mt-5 pt-5 border-t border-border/70 flex flex-wrap items-center justify-between gap-3 text-sm">
-                  <span className="inline-flex items-center gap-2 text-muted-foreground">
-                    <Clock className="h-4 w-4 text-primary" /> {business.hoursShort}
-                  </span>
-                  <a href={phoneHref} className="inline-flex items-center gap-2 font-semibold text-foreground hover:text-primary transition-colors">
-                    <Phone className="h-4 w-4 text-primary" /> {business.phone}
-                  </a>
-                </div>
+              <div className="p-5 sm:p-7">
+                <h2 className="font-heading text-2xl text-foreground mb-1 font-bold">{hero.formHeading}</h2>
+                <p className="text-muted-foreground text-sm mb-5">{hero.formSubheading}</p>
+                <FormEmbed idPrefix="inline" />
               </div>
             </div>
           </m.div>

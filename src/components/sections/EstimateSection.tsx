@@ -6,7 +6,7 @@ import { SplitReveal } from "@/components/Reveal";
 import FormEmbed from "@/components/FormEmbed";
 import { ESTIMATE_SECTION_ID } from "@/components/QuoteFormContext";
 
-/** Homepage lead-form section: the GHL form plus its SMS disclosure. Data: content.json -> estimate */
+/** Homepage bottom lead-form section (second copy of the hero form). Data: content.json -> estimate */
 const EstimateSection = () => {
   const data = content.estimate;
   const { business } = site;
@@ -103,7 +103,7 @@ const EstimateSection = () => {
               <div className="p-5 sm:p-7">
                 <h3 className="font-heading text-2xl text-foreground font-bold mb-1">{data.formHeading}</h3>
                 <p className="text-muted-foreground text-sm mb-5">{data.formSub}</p>
-                <FormEmbed idPrefix="inline" />
+                <FormEmbed idPrefix="inline" suffix="-2" />
               </div>
             </div>
           </m.div>

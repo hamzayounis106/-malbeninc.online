@@ -30,7 +30,9 @@
     "footerTagline": "Renovation Services in Miami, FL"
   },
   "domain": "https://malbeninc.online",
-  "languages": ["en"],
+  "languages": [
+    "en"
+  ],
   "logo": {
     "header": "/images/logo.png",
     "footer": "/images/logo.png",
@@ -72,12 +74,21 @@
     ],
     "subtitle": "Malben Inc. remodels kitchens, bathrooms, floors and entire homes across Miami, FL. Tell us what you have in mind and we will get back to you with a free estimate.",
     "primaryCta": "Get a Free Estimate",
-    "cardHeading": "What we renovate",
-    "cardSub": "One team for the whole project.",
+    "formHeading": "Request Your Free Estimate",
+    "formSubheading": "Tell us about your project and we will get back to you.",
     "badges": [
-      { "icon": "ClipboardList", "label": "Free estimates" },
-      { "icon": "Clock", "label": "Mon to Sat, 8 AM to 6 PM" },
-      { "icon": "MapPin", "label": "Based in Miami, FL" }
+      {
+        "icon": "ClipboardList",
+        "label": "Free estimates"
+      },
+      {
+        "icon": "Clock",
+        "label": "Mon to Sat, 8 AM to 6 PM"
+      },
+      {
+        "icon": "MapPin",
+        "label": "Based in Miami, FL"
+      }
     ]
   },
   "homeSections": [
@@ -93,7 +104,9 @@
     "defaultDescription": "Malben Inc. is a renovation company in Miami, FL offering kitchen and bathroom remodeling, flooring, interior and exterior painting, drywall repairs and full home renovations. Free estimates.",
     "ogImage": "/images/og-image.png",
     "priceRange": "$$",
-    "areaServed": ["Miami, FL"]
+    "areaServed": [
+      "Miami, FL"
+    ]
   },
   "policies": {
     "effectiveDate": "Jan 1st, 2026"

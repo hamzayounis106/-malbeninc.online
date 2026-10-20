@@ -2,8 +2,10 @@ import React, { createContext, useContext, useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { getLenis } from "@/components/SmoothScroll";
 
-/** id of the section that holds the lead form (Home and Contact pages). */
+/** id of the section that holds the lead form (bottom of Home, and Contact). */
 export const ESTIMATE_SECTION_ID = "estimate";
+/** id of the hero form card on the Home page (preferred scroll target when present). */
+export const HERO_FORM_ID = "estimate-hero";
 
 const QuoteFormContext = createContext<{ openQuoteForm: () => void }>({
   openQuoteForm: () => {},
@@ -13,7 +15,7 @@ export const useQuoteForm = () => useContext(QuoteFormContext);
 
 /** Smooth-scrolls to the estimate form on the current page. Returns false when the page has none. */
 export const scrollToEstimateForm = (immediate = false): boolean => {
-  const el = document.getElementById(ESTIMATE_SECTION_ID);
+  const el = document.getElementById(HERO_FORM_ID) ?? document.getElementById(ESTIMATE_SECTION_ID);
   if (!el) return false;
   const lenis = getLenis();
   if (lenis) lenis.scrollTo(el, { offset: -16, immediate });

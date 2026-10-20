@@ -6,11 +6,12 @@ import { site } from "@/lib/site";
  * minimum height so the section never collapses while the widget script loads.
  *
  * The SMS consent wording and policy links live inside the GHL form itself.
- * When two copies share one page, give the second a different idPrefix.
+ * When two copies share one page, give the second a suffix (e.g. "-2") so the
+ * iframe id and data-layout-iframe-id do not collide.
  */
-const FormEmbed = ({ idPrefix = "inline" }: { idPrefix?: string }) => {
+const FormEmbed = ({ idPrefix = "inline", suffix = "" }: { idPrefix?: string; suffix?: string }) => {
   const form = site.widgets.quoteForm;
-  const frameId = `${idPrefix}-${form.formId}`;
+  const frameId = `${idPrefix}-${form.formId}${suffix}`;
 
   return (
     <div className="ghl-form-shell w-full" style={{ minHeight: `${form.minHeight}px` }}>

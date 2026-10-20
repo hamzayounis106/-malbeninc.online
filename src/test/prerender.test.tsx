@@ -100,18 +100,23 @@ describe.each(paths)("prerendered %s", (path) => {
   }
 });
 
-describe.each(["/", "/contact"])("lead form on %s", (path) => {
-  it("renders the GHL form in its min-height container", () => {
+describe.each([
+  ["/", 2],
+  ["/contact", 1],
+])("lead form on %s", (path, copies) => {
+  it("renders the GHL form in its min-height container, with unique ids per copy", () => {
     const doc = parse(render(path).html);
     const frames = [...doc.querySelectorAll("iframe")];
-    expect(frames).toHaveLength(1);
-    const frame = frames[0];
-    expect(frame.getAttribute("src")).toBe(site.widgets.quoteForm.src);
-    expect(frame.getAttribute("data-form-id")).toBe(site.widgets.quoteForm.formId);
-    expect(frame.id).toBe(`inline-${site.widgets.quoteForm.formId}`);
-    expect(frame.getAttribute("data-layout-iframe-id")).toBe(frame.id);
-    expect(frame.getAttribute("data-cookie-consent")).toBe("true");
-    expect(Number.parseInt(frame.parentElement!.style.minHeight, 10)).toBeGreaterThanOrEqual(770);
+    expect(frames).toHaveLength(copies);
+    const base = `inline-${site.widgets.quoteForm.formId}`;
+    expect(frames.map((f) => f.id)).toEqual(copies === 1 ? [base] : [base, `${base}-2`]);
+    for (const frame of frames) {
+      expect(frame.getAttribute("src")).toBe(site.widgets.quoteForm.src);
+      expect(frame.getAttribute("data-form-id")).toBe(site.widgets.quoteForm.formId);
+      expect(frame.getAttribute("data-layout-iframe-id")).toBe(frame.id);
+      expect(frame.getAttribute("data-cookie-consent")).toBe("true");
+      expect(Number.parseInt(frame.parentElement!.style.minHeight, 10)).toBeGreaterThanOrEqual(770);
+    }
 
   });
 });
