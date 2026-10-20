@@ -24,7 +24,8 @@ in `src/data/*.json`; components never hardcode a name, phone, email or colour.
   plus `404.html`. `public/.htaccess` maps clean URLs onto those files on Hostinger.
 - `npm run site:seo` regenerates `index.html` head, `sitemap.xml` and `robots.txt`.
   `npm run site:qa` and `npm test` must pass before pushing.
-- Deploy target is Hostinger (SFTP upload of `dist/`), not Lovable.
+- Deploy target is Vercel (`vercel.json`: Vite preset, output `dist/`, cleanUrls, no trailing
+  slash) with Hostinger as the fallback (SFTP upload of `dist/`, `public/.htaccess`). Not Lovable.
 
 ## Design notes
 

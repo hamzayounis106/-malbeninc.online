@@ -35,4 +35,12 @@ npm run build        # client build + SSR build + prerender into dist/
 npm test             # hydration, a11y and A2P checks on every prerendered page
 ```
 
-Deploy: upload the contents of `dist/` to the domain's `public_html`.
+## Deploy
+
+**Vercel (primary):** import the GitHub repo in Vercel; `vercel.json` sets the Vite preset,
+`npm run build`, output `dist/`, clean URLs (`/privacy-policy` serves `privacy-policy.html`),
+no trailing slashes, the `404.html` page and cache headers. Add the custom domain
+`malbeninc.online` in the Vercel project and point the domain's DNS at Vercel.
+
+**Hostinger (alternative):** upload the contents of `dist/` to the domain's `public_html`;
+`public/.htaccess` gives the same clean URLs on Apache/LiteSpeed.
