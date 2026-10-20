@@ -1,7 +1,7 @@
 // Every prerendered page must hydrate without a mismatch, and its markup must
 // meet the structural accessibility/SEO rules Lighthouse checks. Vitest runs
 // React's development build, which names hydration mismatches explicitly.
-// The A2P checks make sure the lead form and its SMS disclosure stay in place.
+// The A2P checks make sure the lead form stays in place on Home and Contact.
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { act } from "react";
 import { hydrateRoot, type Root } from "react-dom/client";
@@ -101,7 +101,7 @@ describe.each(paths)("prerendered %s", (path) => {
 });
 
 describe.each(["/", "/contact"])("lead form on %s", (path) => {
-  it("renders the GHL form with the SMS disclosure and both policy links right under it", () => {
+  it("renders the GHL form in its min-height container", () => {
     const doc = parse(render(path).html);
     const frames = [...doc.querySelectorAll("iframe")];
     expect(frames).toHaveLength(1);
@@ -113,16 +113,6 @@ describe.each(["/", "/contact"])("lead form on %s", (path) => {
     expect(frame.getAttribute("data-cookie-consent")).toBe("true");
     expect(Number.parseInt(frame.parentElement!.style.minHeight, 10)).toBeGreaterThanOrEqual(770);
 
-    const disclosure = frame.parentElement!.nextElementSibling!;
-    expect(disclosure.getAttribute("data-sms-disclosure")).toBe("true");
-    const text = disclosure.textContent ?? "";
-    expect(text).toContain(`text messages from ${site.business.legalName}`);
-    expect(text).toContain("Message frequency varies");
-    expect(text).toContain("Msg & data rates may apply");
-    expect(text).toContain("Reply STOP to opt out, HELP for help");
-    expect(text).toContain("Consent is not a condition of purchase");
-    expect(disclosure.querySelector('a[href="/privacy-policy"]')?.textContent).toBe("Privacy Policy");
-    expect(disclosure.querySelector('a[href="/terms-of-service"]')?.textContent).toBe("Terms of Service");
   });
 });
 

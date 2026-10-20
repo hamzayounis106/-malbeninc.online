@@ -1,9 +1,10 @@
 # malbeninc.online
 
 Website for MALBEN, INC., a renovation company in Miami, FL. Built for A2P 10DLC
-carrier review: the GoHighLevel lead form appears on the Home and Contact pages, each
-copy followed by a plain-text SMS disclosure linking the Privacy Policy and Terms of
-Service, and no other form on the site collects phone numbers or emails.
+carrier review: the GoHighLevel lead form appears on the Home and Contact pages (its SMS
+consent checkboxes and policy links are configured inside GoHighLevel), the footer links the
+Privacy Policy and Terms of Service on every page, and no other form on the site collects
+phone numbers or emails.
 
 ## Stack
 
@@ -20,7 +21,7 @@ Vite + React + TypeScript + Tailwind, prerendered at build time to static HTML
 - `src/data/content.json`: all section and page copy.
 - `src/data/services.json`: the six services.
 - `src/pages/PrivacyPolicy.tsx`, `src/pages/TermsOfService.tsx`: policy text (values pulled from `site.json`).
-- `src/components/FormEmbed.tsx` + `SmsDisclosure.tsx`: the lead form and its disclosure.
+- `src/components/FormEmbed.tsx`: the lead form embed.
 - `public/.htaccess`: clean URL rewrites, 404 page, cache headers.
 
 ## Commands

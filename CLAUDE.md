@@ -7,8 +7,8 @@ in `src/data/*.json`; components never hardcode a name, phone, email or colour.
 ## Compliance rules (do not regress)
 
 - The GoHighLevel form (`site.json -> widgets.quoteForm`) renders through `FormEmbed`
-  on the Home page (`EstimateSection`) and the Contact page. Every copy is followed by
-  `<SmsDisclosure />`, outside the iframe, linking `/privacy-policy` and `/terms-of-service`.
+  on the Home page (`EstimateSection`) and the Contact page. The SMS consent wording and
+  policy links live inside the GHL form itself (configured in GoHighLevel, not here).
 - No other form, input, newsletter box or popup form anywhere on the site
   (`npm test` enforces this).
 - The footer on every page links both policies and shows the legal name, address and phone.

@@ -4,7 +4,6 @@ import { content, site, phoneHref, mailHref, mapHref } from "@/lib/site";
 import Highlight from "@/components/Highlight";
 import { SplitReveal } from "@/components/Reveal";
 import FormEmbed from "@/components/FormEmbed";
-import SmsDisclosure from "@/components/SmsDisclosure";
 import { ESTIMATE_SECTION_ID } from "@/components/QuoteFormContext";
 
 /** Homepage lead-form section: the GHL form plus its SMS disclosure. Data: content.json -> estimate */
@@ -105,7 +104,6 @@ const EstimateSection = () => {
                 <h3 className="font-heading text-2xl text-foreground font-bold mb-1">{data.formHeading}</h3>
                 <p className="text-muted-foreground text-sm mb-5">{data.formSub}</p>
                 <FormEmbed idPrefix="inline" />
-                <SmsDisclosure />
               </div>
             </div>
           </m.div>

@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import TextHero from "@/components/TextHero";
 import Seo from "@/components/Seo";
 import FormEmbed from "@/components/FormEmbed";
-import SmsDisclosure from "@/components/SmsDisclosure";
 import { ESTIMATE_SECTION_ID, scrollToEstimateForm } from "@/components/QuoteFormContext";
 import { site, content, phoneHref, mailHref, mapHref } from "@/lib/site";
 import Highlight from "@/components/Highlight";
@@ -142,7 +141,6 @@ const Contact = () => {
                     <h3 className="font-heading text-2xl text-foreground font-bold mb-1">{data.formHeading}</h3>
                     <p className="text-muted-foreground text-sm mb-5">{data.formSub}</p>
                     <FormEmbed idPrefix="inline" />
-                    <SmsDisclosure />
                   </div>
                 </div>
               </m.div>

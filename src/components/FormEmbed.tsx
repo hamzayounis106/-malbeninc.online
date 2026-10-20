@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
  * with the client's exact embed attributes, inside a container with a fixed
  * minimum height so the section never collapses while the widget script loads.
  *
- * Every copy of this form must be followed by <SmsDisclosure /> (A2P 10DLC).
+ * The SMS consent wording and policy links live inside the GHL form itself.
  * When two copies share one page, give the second a different idPrefix.
  */
 const FormEmbed = ({ idPrefix = "inline" }: { idPrefix?: string }) => {
