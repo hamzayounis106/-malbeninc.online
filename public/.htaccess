@@ -1,0 +1,42 @@
+# MALBEN, INC. - static prerendered site (Vite build output) on Apache / LiteSpeed.
+# Pages are flat files: index.html, services.html, about.html, contact.html,
+# privacy-policy.html, terms-of-service.html, 404.html. Clean URLs map onto them.
+
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # /foo/ -> /foo (only when /foo is not a real directory)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^/(.+)/$
+  RewriteRule ^ /%1 [R=301,L]
+
+  # /index.html -> /  and  /foo.html -> /foo (canonical clean URLs)
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # Clean URL -> prerendered file: /privacy-policy serves privacy-policy.html (200, no redirect)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([^.]+)$ $1.html [L]
+</IfModule>
+
+# HTML is never cached by the browser (so a deploy shows up at once);
+# the hashed files under /assets get a long immutable lifetime (assets/.htaccess).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(png|ico|jpg|jpeg|webp|svg)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

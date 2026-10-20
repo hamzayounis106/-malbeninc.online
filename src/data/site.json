@@ -1,0 +1,101 @@
+{
+  "business": {
+    "name": "Malben Inc.",
+    "legalName": "MALBEN, INC.",
+    "specialty": "Renovation Services",
+    "phone": "(239) 360-5200",
+    "phoneRaw": "2393605200",
+    "email": "talha@creatic.pro",
+    "address": {
+      "street": "8580 N.W. 8 Street",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33126",
+      "country": "United States"
+    },
+    "addressLine": "8580 N.W. 8 Street, Miami, FL 33126, United States",
+    "serviceAreaShort": "Miami, FL",
+    "hoursShort": "Mon to Sat, 8 AM to 6 PM",
+    "hours": [
+      {
+        "days": "Monday to Saturday",
+        "time": "8:00 AM to 6:00 PM"
+      }
+    ],
+    "languageBadge": "",
+    "languageNote": "",
+    "offer": "",
+    "offerShort": "",
+    "footerBlurb": "Malben Inc. is a renovation company based in Miami, FL. Kitchens, bathrooms, flooring, painting, drywall and full home renovations, planned clearly and finished with care.",
+    "footerTagline": "Renovation Services in Miami, FL"
+  },
+  "domain": "https://malbeninc.online",
+  "languages": ["en"],
+  "logo": {
+    "header": "/images/logo.png",
+    "footer": "/images/logo.png",
+    "loader": "/images/logo-light.png",
+    "footerCard": true
+  },
+  "social": [],
+  "widgets": {
+    "quoteForm": {
+      "src": "https://api.leadconnectorhq.com/widget/form/MHn0RfAJwh0nH51a4mwd",
+      "formId": "MHn0RfAJwh0nH51a4mwd",
+      "height": 769,
+      "minHeight": 770,
+      "name": "Optin"
+    },
+    "formEmbedScript": "https://link.msgsndr.com/js/form_embed.js"
+  },
+  "theme": {
+    "primary": "36 60% 36%",
+    "primaryForeground": "0 0% 100%",
+    "secondary": "38 62% 58%",
+    "secondaryForeground": "0 0% 11%",
+    "accent": "0 0% 11%",
+    "accentForeground": "0 0% 100%",
+    "accentDark": "0 0% 5%",
+    "fontHeading": "Bricolage Grotesque",
+    "fontHeadingWeights": "400;500;600;700;800",
+    "fontBody": "Inter",
+    "fontBodyWeights": "400;500;600;700",
+    "fontAccent": "Instrument Serif",
+    "$note": "HSL triplets taken from the logo pixels: gold #b2833b darkened to AA (primary), light gold highlight (secondary), charcoal #1e1e1e (accent). Run npm run site:theme after edits."
+  },
+  "hero": {
+    "badge": "Renovation services in Miami, FL",
+    "titleLines": [
+      "Home renovations",
+      "done with |care|,",
+      "start to finish"
+    ],
+    "subtitle": "Malben Inc. remodels kitchens, bathrooms, floors and entire homes across Miami, FL. Tell us what you have in mind and we will get back to you with a free estimate.",
+    "primaryCta": "Get a Free Estimate",
+    "cardHeading": "What we renovate",
+    "cardSub": "One team for the whole project.",
+    "badges": [
+      { "icon": "ClipboardList", "label": "Free estimates" },
+      { "icon": "Clock", "label": "Mon to Sat, 8 AM to 6 PM" },
+      { "icon": "MapPin", "label": "Based in Miami, FL" }
+    ]
+  },
+  "homeSections": [
+    "hero",
+    "services",
+    "whyChooseUs",
+    "process",
+    "ctaBanner",
+    "estimateForm"
+  ],
+  "seo": {
+    "defaultTitle": "Malben Inc. | Renovation Services in Miami, FL",
+    "defaultDescription": "Malben Inc. is a renovation company in Miami, FL offering kitchen and bathroom remodeling, flooring, interior and exterior painting, drywall repairs and full home renovations. Free estimates.",
+    "ogImage": "/images/og-image.png",
+    "priceRange": "$$",
+    "areaServed": ["Miami, FL"]
+  },
+  "policies": {
+    "effectiveDate": "Jan 1st, 2026"
+  }
+}

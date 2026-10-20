@@ -1,0 +1,130 @@
+{
+  "servicesSection": {
+    "eyebrow": "What We Do",
+    "heading": "Renovation |services| for Miami homes",
+    "intro": "Six core services, handled by one team from the first walkthrough to the final cleanup."
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why Malben Inc.",
+    "headingTop": "Straight answers,",
+    "headingBottom": "|careful| work.",
+    "intro": "Four commitments that shape every project we take on in Miami, FL.",
+    "reasons": [
+      {
+        "icon": "ClipboardList",
+        "title": "Written estimates before work starts",
+        "desc": "You see the scope and the price in writing before anything begins. If something changes along the way, we talk it through with you first."
+      },
+      {
+        "icon": "HeartHandshake",
+        "title": "One point of contact",
+        "desc": "The same person handles your project from the first visit to the final walkthrough, so questions get answered and nothing is lost between trades."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Clean, respectful job sites",
+        "desc": "Floors and furniture are protected, dust is contained and the site is tidied at the end of each working day."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Based in Miami, FL",
+        "desc": "Malben Inc. works from 8580 N.W. 8 Street in Miami, so site visits and scheduling around the city are simple."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How It Works",
+    "heading": "Three steps to a |finished| space",
+    "intro": "A simple process, so you always know what happens next.",
+    "steps": [
+      {
+        "icon": "MessageSquare",
+        "title": "Tell us about your project",
+        "desc": "Call us or send the form. We ask a few questions and schedule a visit at a time that suits you."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Get a written estimate",
+        "desc": "We measure the space, go over materials with you and give you a clear estimate with the scope spelled out."
+      },
+      {
+        "icon": "Hammer",
+        "title": "We do the work",
+        "desc": "Our team completes the renovation on the agreed plan, keeps you updated and walks the finished space with you."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "eyebrow": "Ready When You Are",
+    "heading": "Let's talk about |your project|",
+    "sub": "Call (239) 360-5200 or send us the form and we will follow up to schedule a free estimate.",
+    "bullets": ["Free estimates", "Mon to Sat, 8 AM to 6 PM", "Serving Miami, FL"]
+  },
+  "estimate": {
+    "eyebrow": "Free Estimate",
+    "heading": "Request your |free estimate|",
+    "intro": "Tell us about your project and we will contact you to schedule a visit. Prefer to talk? Call us during business hours.",
+    "formHeading": "Tell us about your project",
+    "formSub": "Fill in the form and a member of our team will get back to you."
+  },
+  "about": {
+    "heroEyebrow": "About Malben Inc.",
+    "heroTitle": "A Miami renovation company that keeps things simple",
+    "heroSubtitle": "Kitchens, bathrooms, flooring, painting, drywall and full home renovations, planned clearly and finished with care.",
+    "storyEyebrow": "Who We Are",
+    "storyHeading": "Careful work and |clear| communication",
+    "story": [
+      "Malben Inc. is a renovation company based in Miami, FL. We work on kitchens, bathrooms, flooring, interior and exterior painting, drywall repairs and complete home renovations for homeowners across the Miami area.",
+      "Every project starts with a conversation and a visit. We listen to what you want to change, look at the space with you and put together a written estimate, so you know what the work includes before anything begins.",
+      "During the job we keep the site clean, keep you informed and finish the details properly. When the work is done, we walk through it with you to make sure everything is the way you expected."
+    ],
+    "valuesEyebrow": "Our Standards",
+    "valuesHeading": "What we |stand for|",
+    "valuesIntro": "Four standards we hold ourselves to on every project, large or small.",
+    "values": [
+      { "icon": "MessageSquare", "title": "Clear communication", "desc": "Straight answers about scope, timing and cost, from the first call to the last day." },
+      { "icon": "Gem", "title": "Careful workmanship", "desc": "Proper preparation, suitable materials and finish work we are glad to put our name on." },
+      { "icon": "HeartHandshake", "title": "Respect for your home", "desc": "Protected floors, contained dust and a tidy site at the end of each day." },
+      { "icon": "CheckCircle", "title": "Honest scope", "desc": "We recommend what the space actually needs, nothing more." }
+    ],
+    "cta": {
+      "heading": "Ready to start your |renovation|?",
+      "sub": "Request a free estimate and we will get back to you to schedule a visit."
+    }
+  },
+  "contact": {
+    "heroEyebrow": "Contact Us",
+    "heroTitle": "Contact Malben Inc.",
+    "heroSubtitle": "Call, email or send the form and we will get back to you to schedule a free estimate.",
+    "infoEyebrow": "Get In Touch",
+    "infoHeading": "We are here to |help|",
+    "infoIntro": "Reach us by phone or email during business hours, or send the form and we will contact you.",
+    "formHeading": "Request a Free Estimate",
+    "formSub": "Fill in the form below and we will contact you shortly."
+  },
+  "pages": {
+    "services": {
+      "seoTitle": "Renovation Services in Miami, FL | Malben Inc.",
+      "seoDescription": "Kitchen remodeling, bathroom remodeling, flooring, interior and exterior painting, drywall repairs and full home renovations in Miami, FL. Request a free estimate from Malben Inc.",
+      "heroEyebrow": "Renovation Services",
+      "heroTitle": "Our Services",
+      "heroSubtitle": "Kitchens, bathrooms, flooring, painting, drywall and full home renovations in Miami, FL, each starting with a free estimate."
+    },
+    "about": {
+      "seoTitle": "About Malben Inc. | Renovation Company in Miami, FL",
+      "seoDescription": "Malben Inc. is a renovation company based in Miami, FL. Learn how we plan, estimate and complete kitchen, bathroom, flooring, painting and full home renovation projects."
+    },
+    "contact": {
+      "seoTitle": "Contact Malben Inc. | Free Renovation Estimate in Miami, FL",
+      "seoDescription": "Contact Malben Inc. for a free renovation estimate in Miami, FL. Call (239) 360-5200, email us or send the form. Open Monday to Saturday, 8 AM to 6 PM."
+    },
+    "privacy": {
+      "seoTitle": "Privacy Policy | Malben Inc. Renovation Services, Miami, FL",
+      "seoDescription": "Privacy Policy for MALBEN, INC., a renovation company in Miami, FL, covering how we collect, use and protect your information, including SMS opt-in data and consent records."
+    },
+    "terms": {
+      "seoTitle": "Terms of Service | Malben Inc. Renovation Services, Miami, FL",
+      "seoDescription": "Terms of Service for the MALBEN, INC. website and SMS messaging program, including opt-out and help instructions, for our renovation services in Miami, FL."
+    }
+  }
+}

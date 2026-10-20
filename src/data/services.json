@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "kitchen-remodeling",
+    "title": "Kitchen Remodeling",
+    "icon": "CookingPot",
+    "short": "Cabinets, counters, lighting and layouts that make the kitchen work better every day.",
+    "description": "The kitchen is the most used room in the house, so it has to work as well as it looks. Malben Inc. remodels kitchens from cabinet and countertop updates to full layout changes, coordinating cabinetry, counters, tile, plumbing fixtures and lighting so the room comes together as one finished space."
+  },
+  {
+    "slug": "bathroom-remodeling",
+    "title": "Bathroom Remodeling",
+    "icon": "Bath",
+    "short": "Showers, tubs, tile, vanities and fixtures, updated or rebuilt from the ground up.",
+    "description": "A bathroom remodel has to be done in the right order, with the right materials behind the walls. We handle tub to shower conversions, new tile, vanities, fixtures and lighting, as well as full bathroom rebuilds, with attention to waterproofing, ventilation and the details you see every morning."
+  },
+  {
+    "slug": "flooring",
+    "title": "Flooring",
+    "icon": "Layers",
+    "short": "Tile, vinyl plank, laminate and wood flooring installed flat, tight and clean.",
+    "description": "Good flooring starts with a sound, level subfloor. We prepare the surface, then install tile, luxury vinyl plank, laminate or wood flooring with clean transitions between rooms and tidy trim work, so the finished floor looks intentional at every doorway."
+  },
+  {
+    "slug": "interior-and-exterior-painting",
+    "title": "Interior and Exterior Painting",
+    "icon": "PaintRoller",
+    "short": "Careful prep and clean finish coats for walls, ceilings, trim and exteriors.",
+    "description": "A lasting paint job is mostly preparation. We patch, sand, caulk and prime before the finish coats go on, and we protect floors, furniture and landscaping while we work. Interior walls, ceilings, trim and doors, as well as exterior walls and fascia, all get the right product for the surface."
+  },
+  {
+    "slug": "drywall-and-repairs",
+    "title": "Drywall and Repairs",
+    "icon": "Hammer",
+    "short": "New drywall, patching, texture matching and general repairs around the home.",
+    "description": "From a single patch to new walls and ceilings, we install, tape, finish and texture drywall so repairs blend in with the surrounding surface. We also take on the general repairs that come up during a renovation, so you have one team to call."
+  },
+  {
+    "slug": "full-home-renovations",
+    "title": "Full Home Renovations",
+    "icon": "Home",
+    "short": "Whole-home projects planned and managed by one team, start to finish.",
+    "description": "When several rooms need work at once, one plan and one team keep the project on track. Malben Inc. manages full home renovations in Miami, FL, from kitchens and bathrooms to flooring, paint and drywall, sequencing the work so each stage is ready for the next and the home comes together as a whole."
+  }
+]
